@@ -1,60 +1,7 @@
 ﻿<Application x:Class="Calculator.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="UI/MainWindow.xaml">
-	<Application.Resources>
-		<Style TargetType="Button">
-			<Setter Property="FontFamily" Value="Consolas" />
-			<Setter Property="FontSize" Value="24" />
-			<Setter Property="HorizontalAlignment" Value="Stretch" />
-			<Setter Property="VerticalAlignment" Value="Stretch" />
-			<Setter Property="HorizontalContentAlignment" Value="Center" />
-			<Setter Property="VerticalContentAlignment" Value="Center" />
-			<Setter Property="Focusable" Value="False" />
-			<Setter Property="Background" Value="White" />
-			<Setter Property="Foreground" Value="Black" />
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid>
-							<Rectangle HorizontalAlignment="Stretch"
-									   VerticalAlignment="Stretch"
-									   Fill="{TemplateBinding Property=Background}" />
-							<TextBlock Foreground="{TemplateBinding Property=Foreground}"
-						               FontFamily="{TemplateBinding Property=FontFamily}"
-						               FontSize="{TemplateBinding Property=FontSize}"
-								       Padding="{TemplateBinding Property=Padding}"
-								       HorizontalAlignment="{TemplateBinding Property=HorizontalContentAlignment}"
-							           VerticalAlignment="{TemplateBinding Property=VerticalContentAlignment}">
-								<ContentPresenter />
-							</TextBlock>
-						</Grid>
-
-						<ControlTemplate.Triggers>
-							<EventTrigger RoutedEvent="MouseEnter">
-								<BeginStoryboard>
-									<Storyboard>
-										<ColorAnimation To="#FF66CC99" Duration="0:0:0"
-										                Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" />
-										<ColorAnimation To="White" Duration="0:0:0"
-										                Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" />
-									</Storyboard>
-								</BeginStoryboard>
-							</EventTrigger>
-							<EventTrigger RoutedEvent="MouseLeave">
-								<BeginStoryboard>
-									<Storyboard>
-										<ColorAnimation To="White" Duration="0:0:0"
-										                Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" />
-										<ColorAnimation To="Black" Duration="0:0:0"
-										                Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" />
-									</Storyboard>
-								</BeginStoryboard>
-							</EventTrigger>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</Application.Resources>
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+    </Application.Resources>
 </Application>
