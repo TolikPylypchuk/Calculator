@@ -1,0 +1,132 @@
+﻿<Window x:Class="Calculator.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Calculator" Height="320" Width="260"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize" PreviewKeyDown="Window_PreviewKeyUp">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0" Margin="10,10,10,0">
+			<ScrollViewer x:Name="expressionScrollViewer"
+			              VerticalScrollBarVisibility="Disabled"
+			              HorizontalScrollBarVisibility="Auto">
+				<TextBox x:Name="expressionTextBox"
+				         Height="40" IsReadOnly="True"
+				         FontFamily="Consolas" FontSize="20"
+				         HorizontalContentAlignment="Right"
+				         VerticalContentAlignment="Center"
+				         Text="0" Cursor="Arrow" />
+			</ScrollViewer>
+		</Grid>
+		
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="43*" />
+				<RowDefinition Height="43*" />
+				<RowDefinition Height="43*" />
+				<RowDefinition Height="43*" />
+				<RowDefinition Height="43*" />
+			</Grid.RowDefinitions>
+
+			<Button Grid.Row="0" Grid.Column="0" FontSize="15"
+			        Click="Function_Click" Content="sin" />
+			
+			<Button Grid.Row="0" Grid.Column="1"
+			        Click="OpenParenthesis_Click" Content="(" />
+			
+			<Button Grid.Row="0" Grid.Column="2"
+			        Click="CloseParenthesis_Click" Content=")" />
+
+			<Button Grid.Row="0" Grid.Column="3" IsCancel="True"
+			        Click="Clear_Click" Content="C" />
+
+			<Button Grid.Row="0" Grid.Column="4" FontSize="15"
+			        Click="Backspace_Click" Content="⌫" />
+
+			<Button Grid.Row="0" Grid.Column="5"
+			        Click="Operator_Click" Content="÷" />
+			
+			<Button Grid.Row="1" Grid.Column="0" FontSize="15"
+			        Click="Function_Click" Content="cos" />
+
+			<Button Grid.Row="1" Grid.Column="1"
+			        Click="Function_Click" Content="√" />
+
+			<Button Grid.Row="1" Grid.Column="2"
+			        Click="Digit_Click" Content="7" />
+
+			<Button Grid.Row="1" Grid.Column="3"
+			        Click="Digit_Click" Content="8" />
+
+			<Button Grid.Row="1" Grid.Column="4"
+			        Click="Digit_Click" Content="9" />
+			
+			<Button Grid.Row="1" Grid.Column="5"
+			        Click="Operator_Click" Content="×" />
+			
+			<Button Grid.Row="2" Grid.Column="0" FontSize="15"
+			        Click="Function_Click" Content="tg" />
+			
+			<Button Grid.Row="2" Grid.Column="1"
+			        Click="Operator_Click" Content="^" />
+
+			<Button Grid.Row="2" Grid.Column="2"
+			        Click="Digit_Click" Content="4" />
+
+			<Button Grid.Row="2" Grid.Column="3"
+			        Click="Digit_Click" Content="5" />
+
+			<Button Grid.Row="2" Grid.Column="4"
+			        Click="Digit_Click" Content="6" />
+
+			<Button Grid.Row="2" Grid.Column="5"
+			        Click="Operator_Click" Content="-" />
+
+			<Button Grid.Row="3" Grid.Column="0" FontSize="15"
+			        Click="Function_Click" Content="ctg" />
+
+			<Button Grid.Row="3" Grid.Column="1"
+			        Click="Pi_Click" Content="п" />
+
+			<Button Grid.Row="3" Grid.Column="2"
+			        Click="Digit_Click" Content="1" />
+
+			<Button Grid.Row="3" Grid.Column="3"
+			        Click="Digit_Click" Content="2" />
+
+			<Button Grid.Row="3" Grid.Column="4"
+			        Click="Digit_Click" Content="3" />
+
+			<Button Grid.Row="3" Grid.Column="5"
+			        Click="Operator_Click" Content="+" />
+
+			<Button Grid.Row="4" Grid.Column="0" FontSize="10"
+			        Click="About_Click" Content="About" />
+
+			<Button Grid.Row="4" Grid.Column="1"
+			        Click="E_Click" Content="e" />
+
+			<Button Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"
+			        Click="Digit_Click" Content="0" />
+
+			<Button Grid.Row="4" Grid.Column="4"
+			        Click="DecimalSeparator_Click" Content="." />
+
+			<Button Grid.Row="4" Grid.Column="5" IsDefault="True"
+			        Click="Calculate_Click" Content="=" />
+		</Grid>
+	</Grid>
+</Window>
