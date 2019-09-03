@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArgumentNotDigit" xml:space="preserve">
+    <value>The argument is not a digit.</value>
+  </data>
+  <data name="ArgumentNotValidFunction" xml:space="preserve">
+    <value>The argument is not a valid function.</value>
+  </data>
+  <data name="ArgumentNotValidOperator" xml:space="preserve">
+    <value>The argument is not a valid operator.</value>
+  </data>
   <data name="DivisionByZero" xml:space="preserve">
     <value>Division by zero equals infinity.</value>
   </data>

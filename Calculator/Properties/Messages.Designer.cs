@@ -61,6 +61,33 @@ namespace Calculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The argument is not a digit..
+        /// </summary>
+        internal static string ArgumentNotDigit {
+            get {
+                return ResourceManager.GetString("ArgumentNotDigit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument is not a valid function..
+        /// </summary>
+        internal static string ArgumentNotValidFunction {
+            get {
+                return ResourceManager.GetString("ArgumentNotValidFunction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument is not a valid operator..
+        /// </summary>
+        internal static string ArgumentNotValidOperator {
+            get {
+                return ResourceManager.GetString("ArgumentNotValidOperator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Division by zero equals infinity..
         /// </summary>
         internal static string DivisionByZero {

@@ -18,7 +18,7 @@ namespace Calculator.Services
         /// <summary>
         /// The delimiter of the expression tokens.
         /// </summary>
-        private const string Delimiter = " ";
+        public const char Delimiter = ' ';
 
         /// <summary>
         /// Parses an expression and returns its result as a string.
