@@ -1,8 +1,10 @@
-﻿using System.Windows;
+using ReactiveUI;
 
 namespace Calculator
 {
-    public partial class MainWindow : Window
+    public class ReactiveMainWindow : ReactiveWindow<MainViewModel> { }
+
+    public partial class MainWindow : ReactiveMainWindow
     {
         public MainWindow()
             => this.InitializeComponent();
