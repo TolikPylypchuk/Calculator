@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="ArgumentNotDigit" xml:space="preserve">
     <value>The argument is not a digit.</value>
   </data>
@@ -129,11 +132,17 @@
   <data name="DivisionByZero" xml:space="preserve">
     <value>Division by zero equals infinity.</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="InvalidExpression" xml:space="preserve">
     <value>Invalid expression.</value>
   </data>
   <data name="LogarithmOfNegativeNumber" xml:space="preserve">
     <value>A logarithm of a negative number is not a real number.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="RootOfNegativeNumber" xml:space="preserve">
     <value>A root of a negative number is not a real number.</value>

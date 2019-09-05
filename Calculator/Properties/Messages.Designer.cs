@@ -61,6 +61,15 @@ namespace Calculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The argument is not a digit..
         /// </summary>
         internal static string ArgumentNotDigit {
@@ -97,6 +106,15 @@ namespace Calculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid expression..
         /// </summary>
         internal static string InvalidExpression {
@@ -111,6 +129,15 @@ namespace Calculator.Properties {
         internal static string LogarithmOfNegativeNumber {
             get {
                 return ResourceManager.GetString("LogarithmOfNegativeNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
             }
         }
         
