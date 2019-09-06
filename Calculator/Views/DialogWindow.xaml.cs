@@ -4,10 +4,11 @@ using System.Reactive.Disposables;
 using System.Windows;
 
 using Calculator.Properties;
+using Calculator.ViewModels;
 
 using ReactiveUI;
 
-namespace Calculator
+namespace Calculator.Views
 {
     public class ReactiveDialogWindow : ReactiveWindow<DialogViewModel> { }
 

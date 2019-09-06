@@ -1,6 +1,8 @@
+using Calculator.ViewModels;
+
 using ReactiveUI;
 
-namespace Calculator
+namespace Calculator.Views
 {
     public class ReactiveMainWindow : ReactiveWindow<MainViewModel> { }
 

@@ -2,7 +2,7 @@ using System.Reactive;
 
 using ReactiveUI;
 
-namespace Calculator
+namespace Calculator.ViewModels
 {
     public class DialogViewModel : ReactiveObject
     {
