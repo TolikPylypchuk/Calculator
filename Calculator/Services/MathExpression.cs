@@ -182,7 +182,7 @@ namespace Calculator.Services
         /// <exception cref="ArgumentException">
         /// The expression is invalid.
         /// </exception>
-        private static string ToPostfixForm(this string infixForm)
+        public static string ToPostfixForm(this string infixForm)
         {
             string result = String.Empty;
             var stack = new Stack<string>();
