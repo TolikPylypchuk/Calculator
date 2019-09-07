@@ -97,15 +97,6 @@ namespace Calculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tolik Pylypchuk.
-        /// </summary>
-        public static string Author {
-            get {
-                return ResourceManager.GetString("Author", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Calculator.
         /// </summary>
         public static string Calculator {
@@ -115,7 +106,7 @@ namespace Calculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created by.
+        ///   Looks up a localized string similar to Created by Tolik Pylypchuk.
         /// </summary>
         public static string CreatedBy {
             get {

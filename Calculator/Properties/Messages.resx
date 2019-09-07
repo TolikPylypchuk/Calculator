@@ -129,14 +129,11 @@
   <data name="ArgumentNotValidOperator" xml:space="preserve">
     <value>The argument is not a valid operator.</value>
   </data>
-  <data name="Author" xml:space="preserve">
-    <value>Tolik Pylypchuk</value>
-  </data>
   <data name="Calculator" xml:space="preserve">
     <value>Calculator</value>
   </data>
   <data name="CreatedBy" xml:space="preserve">
-    <value>Created by</value>
+    <value>Created by Tolik Pylypchuk</value>
   </data>
   <data name="DivisionByZero" xml:space="preserve">
     <value>Division by zero equals infinity.</value>

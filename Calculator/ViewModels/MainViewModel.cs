@@ -1,6 +1,5 @@
 using System;
 using System.Globalization;
-using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Reflection;
@@ -157,17 +156,9 @@ namespace Calculator.ViewModels
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
 
-            if (version != null)
-            {
-                await this.ShowDialog.Handle(new DialogViewModel(
-                    new[]
-                    {
-                        String.Format(Messages.VersionFormat, version.Major, version.Minor),
-                        Messages.CreatedBy,
-                        Messages.Author
-                    }.Aggregate((acc, item) => acc + Environment.NewLine + item),
-                    DialogType.About));
-            }
+            await this.ShowDialog.Handle(new DialogViewModel(
+                $"{String.Format(Messages.VersionFormat, version?.Major, version?.Minor)}\n{Messages.CreatedBy}",
+                DialogType.About));
         }
 
         private void ClearIfCalculated()

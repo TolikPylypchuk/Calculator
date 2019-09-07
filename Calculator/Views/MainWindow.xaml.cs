@@ -4,9 +4,11 @@ using System.Linq.Expressions;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
+using Calculator.Properties;
 using Calculator.ViewModels;
 
 using ReactiveUI;
@@ -64,7 +66,12 @@ namespace Calculator.Views
                 this.ViewModel.ShowDialog.RegisterHandler(ctx =>
                     Observable.Start(() =>
                     {
-                        new DialogWindow(this, ctx.Input).ShowDialog();
+                        MessageBox.Show(
+                            ctx.Input.Text,
+                            Messages.Calculator,
+                            MessageBoxButton.OK,
+                            ctx.Input.Type == DialogType.Error ? MessageBoxImage.Error : MessageBoxImage.Information);
+
                         ctx.SetOutput(Unit.Default);
                     }, RxApp.MainThreadScheduler));
             });
