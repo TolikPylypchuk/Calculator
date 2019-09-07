@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;0436</NoWarn>
+    <NoWarn>1701;1702;0436;8618;CA1031</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Messages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

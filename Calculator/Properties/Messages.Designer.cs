@@ -22,7 +22,7 @@ namespace Calculator.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Messages {
+    public class Messages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Calculator.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Calculator.Properties.Messages", typeof(Messages).Assembly);
@@ -51,7 +51,7 @@ namespace Calculator.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string About {
+        public static string About {
             get {
                 return ResourceManager.GetString("About", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The argument is not a digit..
         /// </summary>
-        internal static string ArgumentNotDigit {
+        public static string ArgumentNotDigit {
             get {
                 return ResourceManager.GetString("ArgumentNotDigit", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The argument is not a valid function..
         /// </summary>
-        internal static string ArgumentNotValidFunction {
+        public static string ArgumentNotValidFunction {
             get {
                 return ResourceManager.GetString("ArgumentNotValidFunction", resourceCulture);
             }
@@ -90,16 +90,43 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The argument is not a valid operator..
         /// </summary>
-        internal static string ArgumentNotValidOperator {
+        public static string ArgumentNotValidOperator {
             get {
                 return ResourceManager.GetString("ArgumentNotValidOperator", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tolik Pylypchuk.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculator.
+        /// </summary>
+        public static string Calculator {
+            get {
+                return ResourceManager.GetString("Calculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created by.
+        /// </summary>
+        public static string CreatedBy {
+            get {
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Division by zero equals infinity..
         /// </summary>
-        internal static string DivisionByZero {
+        public static string DivisionByZero {
             get {
                 return ResourceManager.GetString("DivisionByZero", resourceCulture);
             }
@@ -108,7 +135,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        internal static string Error {
+        public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
             }
@@ -117,7 +144,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Invalid expression..
         /// </summary>
-        internal static string InvalidExpression {
+        public static string InvalidExpression {
             get {
                 return ResourceManager.GetString("InvalidExpression", resourceCulture);
             }
@@ -126,7 +153,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to A logarithm of a negative number is not a real number..
         /// </summary>
-        internal static string LogarithmOfNegativeNumber {
+        public static string LogarithmOfNegativeNumber {
             get {
                 return ResourceManager.GetString("LogarithmOfNegativeNumber", resourceCulture);
             }
@@ -135,7 +162,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
-        internal static string OK {
+        public static string OK {
             get {
                 return ResourceManager.GetString("OK", resourceCulture);
             }
@@ -144,16 +171,25 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to A root of a negative number is not a real number..
         /// </summary>
-        internal static string RootOfNegativeNumber {
+        public static string RootOfNegativeNumber {
             get {
                 return ResourceManager.GetString("RootOfNegativeNumber", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Version {0}.{1}.
+        /// </summary>
+        public static string VersionFormat {
+            get {
+                return ResourceManager.GetString("VersionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/0 is undefined..
         /// </summary>
-        internal static string ZeroByZero {
+        public static string ZeroByZero {
             get {
                 return ResourceManager.GetString("ZeroByZero", resourceCulture);
             }
@@ -162,7 +198,7 @@ namespace Calculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 0^0 is undefined..
         /// </summary>
-        internal static string ZeroToThePowerOfZero {
+        public static string ZeroToThePowerOfZero {
             get {
                 return ResourceManager.GetString("ZeroToThePowerOfZero", resourceCulture);
             }

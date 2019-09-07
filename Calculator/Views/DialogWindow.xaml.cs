@@ -28,17 +28,13 @@ namespace Calculator.Views
                 this.OneWayBind(this.ViewModel, vm => vm.Text, v => v.TextBlock.Text)
                     .DisposeWith(disposables);
 
-                this.BindType(v => v.Title, Messages.About, Messages.Error)
-                    .DisposeWith(disposables);
+                this.BindType(v => v.Title, Messages.About, Messages.Error, disposables);
 
-                this.BindType(v => v.Width, 200, 260)
-                    .DisposeWith(disposables);
+                this.BindType(v => v.Width, 200, 260, disposables);
 
-                this.BindType(v => v.TextBlock.FontSize, 16, 20)
-                    .DisposeWith(disposables);
+                this.BindType(v => v.TextBlock.FontSize, 16, 20, disposables);
 
-                this.BindType(v => v.TextBlock.Width, 150, 200)
-                    .DisposeWith(disposables);
+                this.BindType(v => v.TextBlock.Width, 150, 200, disposables);
 
                 this.BindCommand(this.ViewModel, vm => vm.Close, v => v.OkButton)
                     .DisposeWith(disposables);
@@ -49,14 +45,16 @@ namespace Calculator.Views
             });
         }
 
-        private IReactiveBinding<DialogWindow, DialogViewModel, T> BindType<T>(
+        private void BindType<T>(
             Expression<Func<DialogWindow, T>> property,
             T aboutValue,
-            T errorValue)
+            T errorValue,
+            CompositeDisposable disposables)
             => this.OneWayBind(
                 this.ViewModel,
                 vm => vm.Type,
                 property,
-                type => type == DialogType.About ? aboutValue : errorValue);
+                type => type == DialogType.About ? aboutValue : errorValue)
+                .DisposeWith(disposables);
     }
 }
