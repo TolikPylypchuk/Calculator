@@ -79,16 +79,17 @@ namespace Calculator.Views
 
         private void CreateBindings(CompositeDisposable disposables)
         {
-            this.ViewModel.WhenAnyValue(
-                        vm => vm.Expression,
-                        vm => vm.Result,
-                        (expr, res) => res != null ? $"{expr}={res}" : expr)
-                    .Subscribe(expr =>
-                    {
-                        this.ExpressionTextBox.Text = expr;
-                        this.ExpressionScrollViewer.ScrollToRightEnd();
-                    })
-                    .DisposeWith(disposables);
+            var expression = this.WhenAnyValue(
+                    v => v.ViewModel.Expression,
+                    v => v.ViewModel.Result,
+                    (expr, res) => res != null ? $"{expr}={res}" : expr);
+
+            expression.BindTo(this, v => v.ExpressionTextBox.Text)
+                .DisposeWith(disposables);
+
+            expression
+                .Subscribe(expr => this.ExpressionScrollViewer.ScrollToRightEnd())
+                .DisposeWith(disposables);
 
             this.BindDigit(v => v.D0Button, '0', disposables);
             this.BindDigit(v => v.D1Button, '1', disposables);
