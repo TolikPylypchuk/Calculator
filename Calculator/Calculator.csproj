@@ -16,11 +16,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="reactiveui" Version="10.5.7" />
-    <PackageReference Include="ReactiveUI.Events.WPF" Version="10.5.7" />
-    <PackageReference Include="ReactiveUI.Fody" Version="10.5.7" />
-    <PackageReference Include="ReactiveUI.WPF" Version="10.5.7" />
-    <PackageReference Include="System.Reactive" Version="4.2.0" />
+    <PackageReference Include="reactiveui" Version="16.3.10" />
+    <PackageReference Include="ReactiveUI.Events.WPF" Version="15.1.1" />
+    <PackageReference Include="ReactiveUI.Fody" Version="16.3.10" />
+    <PackageReference Include="ReactiveUI.WPF" Version="16.3.10" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>

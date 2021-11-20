@@ -80,8 +80,8 @@ namespace Calculator.Views
         private void CreateBindings(CompositeDisposable disposables)
         {
             var expression = this.WhenAnyValue(
-                    v => v.ViewModel.Expression,
-                    v => v.ViewModel.Result,
+                    v => v.ViewModel!.Expression,
+                    v => v.ViewModel!.Result,
                     (expr, res) => res != null ? $"{expr}={res}" : expr);
 
             expression.BindTo(this, v => v.ExpressionTextBox.Text)
