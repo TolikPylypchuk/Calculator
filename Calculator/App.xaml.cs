@@ -1,17 +1,9 @@
-using System.Reflection;
-using System.Windows;
+namespace Calculator;
 
-using ReactiveUI;
-
-using Splat;
-
-namespace Calculator
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
-        {
-            Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetCallingAssembly());
-        }
+        Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetCallingAssembly());
     }
 }

@@ -1,24 +1,19 @@
-using System.Reactive;
+namespace Calculator.ViewModels;
 
-using ReactiveUI;
+public enum DialogType { About, Error }
 
-namespace Calculator.ViewModels
+public class DialogViewModel : ReactiveObject
 {
-    public enum DialogType { About, Error }
-
-    public class DialogViewModel : ReactiveObject
+    public DialogViewModel(string text, DialogType type)
     {
-        public DialogViewModel(string text, DialogType type)
-        {
-            this.Text = text;
-            this.Type = type;
+        this.Text = text;
+        this.Type = type;
 
-            this.Close = ReactiveCommand.Create(() => { });
-        }
-
-        public string Text { get; }
-        public DialogType Type { get; }
-
-        public ReactiveCommand<Unit, Unit> Close { get; }
+        this.Close = ReactiveCommand.Create(() => { });
     }
+
+    public string Text { get; }
+    public DialogType Type { get; }
+
+    public ReactiveCommand<Unit, Unit> Close { get; }
 }
