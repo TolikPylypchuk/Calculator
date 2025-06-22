@@ -78,7 +78,7 @@
             <Button x:Name="SubtractButton" Grid.Row="2" Grid.Column="5" Content="-" />
 
             <Button x:Name="CtgButton" Grid.Row="3" Grid.Column="0" FontSize="15" Content="ctg" />
-            <Button x:Name="PiButton" Grid.Row="3" Grid.Column="1" Content="п" />
+            <Button x:Name="PiButton" Grid.Row="3" Grid.Column="1" Content="π" />
             <Button x:Name="D1Button" Grid.Row="3" Grid.Column="2" Content="1" />
             <Button x:Name="D2Button" Grid.Row="3" Grid.Column="3" Content="2" />
             <Button x:Name="D3Button" Grid.Row="3" Grid.Column="4" Content="3" />
