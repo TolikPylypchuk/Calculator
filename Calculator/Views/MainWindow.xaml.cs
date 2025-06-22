@@ -1,8 +1,8 @@
-namespace Calculator.Views;
-
 using System.Linq.Expressions;
 using System.Windows.Controls;
 using System.Windows.Input;
+
+namespace Calculator.Views;
 
 public class ReactiveMainWindow : ReactiveWindow<MainViewModel> { }
 

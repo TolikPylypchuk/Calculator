@@ -1,8 +1,8 @@
-namespace Calculator.ViewModels;
-
 using System.Text.RegularExpressions;
 
-public class MainViewModel : ReactiveObject
+namespace Calculator.ViewModels;
+
+public partial class MainViewModel : ReactiveObject
 {
     private readonly MathExpressionBuilder builder = new();
 
@@ -59,6 +59,9 @@ public class MainViewModel : ReactiveObject
     public ReactiveCommand<Unit, Unit> ShowAbout { get; }
 
     public Interaction<DialogViewModel, Unit> ShowDialog { get; }
+
+    [GeneratedRegex(@"^[0-9,\.]+$")]
+    private static partial Regex NumberOnly();
 
     private void OnAddDigit(char digit)
     {
@@ -123,7 +126,7 @@ public class MainViewModel : ReactiveObject
 
         string expression = this.builder.GetExpression();
 
-        if (Regex.IsMatch(this.Expression, @"^[0-9,\.]+$"))
+        if (NumberOnly().IsMatch(this.Expression))
         {
             return;
         }

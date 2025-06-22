@@ -1,6 +1,6 @@
-namespace Calculator.Tests.Services;
+using Token = Calculator.Services.MathExpressionBuilder.Token;
 
-using Token = MathExpressionBuilder.Token;
+namespace Calculator.Tests.Services;
 
 public class MathExpressionBuilderTests
 {
