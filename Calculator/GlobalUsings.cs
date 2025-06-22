@@ -12,6 +12,5 @@ global using Calculator.Services;
 global using Calculator.ViewModels;
 
 global using ReactiveUI;
-global using ReactiveUI.Fody.Helpers;
 
 global using Splat;

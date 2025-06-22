@@ -6,14 +6,17 @@ public class MainViewModel : ReactiveObject
 {
     private readonly MathExpressionBuilder builder = new();
 
+    private string? result;
+    private readonly ObservableAsPropertyHelper<string> expressionHelper;
+
     public MainViewModel()
     {
-        this.builder.Expression
+        this.expressionHelper = this.builder.Expression
             .Select(expr => expr.Replace(" ", String.Empty)
                 .Replace("*", "×")
                 .Replace("sqrt", "√")
                 .Replace("p", "п"))
-            .ToPropertyEx(this, vm => vm.Expression);
+            .ToProperty(this, vm => vm.Expression);
 
         this.AddDigit = ReactiveCommand.Create<char>(this.OnAddDigit);
         this.AddOperator = ReactiveCommand.Create<char>(this.OnAddOperator);
@@ -32,10 +35,14 @@ public class MainViewModel : ReactiveObject
         this.ShowDialog = new Interaction<DialogViewModel, Unit>();
     }
 
-    public string Expression { [ObservableAsProperty] get; }
+    public string Expression =>
+        this.expressionHelper.Value;
 
-    [Reactive]
-    public string? Result { get; private set; }
+    public string? Result
+    {
+        get => this.result;
+        set => this.RaiseAndSetIfChanged(ref this.result, value);
+    }
 
     public ReactiveCommand<char, Unit> AddDigit { get; }
     public ReactiveCommand<char, Unit> AddOperator { get; }
